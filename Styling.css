@@ -1,0 +1,54 @@
+body {
+    font-family: tahomas;
+    text-align: center;
+    }
+    header {
+    letter-spacing: 6px;
+    color: white;
+    background: royalblue;
+    padding: 20px; }
+    .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .icons {
+    font-size: 8em;
+    padding: 25px;
+    }
+    .blue {
+    background: teal;
+    }
+    .card {
+    border: 1px solid #ccc;
+    background-color: rgb(0, 186, 233);
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
+    }
+    button, .button {
+    background: royalblue;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    td {
+        padding: 10px;
+        }
+    table {
+        margin: auto;
+        }
+    #my-order {
+        background-color: #cbf9fa;
+        padding: 25px;
+        display: none;
+        }
+            
+    @media screen and (min-width: 50em) {
+    .card {
+    flex-basis: 325px;
+    header h1 {
+    font-size:5em;
+    }}}

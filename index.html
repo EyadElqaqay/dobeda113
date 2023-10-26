@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="Styling.css">
+<script>
+    function placeOrder() {
+    var orderForm=document.getElementById("my-form");
+    results = "<h3>Success!</h3> Here is your order.";
+    results += "<br>Name: " + orderForm.elements["my-name"].value;
+    results += "<br>Address: " + orderForm.elements["my-address"].value;
+    results += "<br>I like to order: " + orderForm.elements["my-drink"].value;
+    results += "<br>Quantity: " + orderForm.elements["my-qty"].value;
+    var orderResults = document.getElementById("my-order");
+    orderResults.style.display = "block";
+    orderResults.innerHTML = results;
+}
+</script>
+</head>
+<body>
+    <header>
+            <h1>
+            Awesome Industries Inc.
+            </h1>
+            <h4>
+            Cute Cupcakes for Best Besties
+            </h4>
+        </header>
+
+    <section class="container">
+        <h2>
+            SERVICES://
+        <h2>
+            <article class="card">
+            <div class="icons"> &#x1F60E; </div>
+            <h3>David Mukhura</h3>
+             <p>Jnr. Web Developer - Creates beautiful
+            websites for businesses in Soweto.</p>
+            <button> Contact </button>
+            </article>
+
+            <article class="card">
+            <div class="icons">  &#10084; </div>
+            <h3>David Mukhura</h3>
+             <p>Jnr. Web Developer - Creates beautiful
+            websites for businesses in Soweto.</p>
+            <button> Contact </button>
+            </article>
+
+            <!-- <article class="card">
+            <div class="icons"> &#x1F60E; </div>
+             <h3>David Mukhura</h3>
+            <p>Jnr. Web Developer - Creates beautiful
+            websites for businesses in Soweto.</p>
+            <button> Contact </button>
+            </article> -->
+
+            <!-- <section class="blue container">
+                <h2>
+                OUR SERVICES://
+                </h2>
+                <article class="card">
+                <div class="icons">&#9749;</div>
+                <h3>Sub-title</h3>
+                <p> ... text. </p>
+                <button>Learn More</button>
+                </article>
+                <article class="card">
+                <div class="icons">&#9734;</div>
+                <h3>Sub-title</h3>
+                <p> ... text. </p>
+                <button>Learn More</button>
+                </article>
+                </section>
+        </section> -->
+
+        <table>
+            <tr>
+            <td>Name:</td>
+            <td>Age:</td>
+            <td>Phone:</td>
+            </tr>
+            <tr>
+            <td>Themba</td>
+            <td>14</td>
+            <td>074 7858588</td>
+            </tr>
+        </table>
+
+        <form id="my-form"
+        action="me.html"
+        target="_blank">
+        <h1>GOOFY FORM:</h1>
+        What’s the silliest idea you have ever had?
+        <br>
+        <input type="text"
+            size="50"
+            name="idea"
+            value="Idea..." >
+        <table>
+        <tr>
+        <td>Name:</td>
+        <td><input type="text" size="25"
+            name="my-name"></td>
+        </tr>
+        <tr>
+        <td>Address:</td>
+        <td><input type="text" size="25"
+        name="my-address"></td>
+        </tr>
+        <tr>
+        <td>Favourite drink:</td>
+        <td>
+        <select name="my-drink">
+        <option> Milk </option>
+        <option> Coffee </option>
+        <option> Tea </option>
+        </select>
+        </td>
+        </tr>
+        <tr>
+        <td>Quantity:</td>
+        <td>
+        <input type="number" name="my-qty"
+        value="1" min="1" max="5">
+        <small>(max 5)</small>
+        </td>
+        </tr>
+        <tr>
+        <br>
+        </tr>
+        <tr>
+        <td colspan="2" >
+            <input
+        type="button"
+        value="Process Order" 
+        class="button" 
+        onclick="placeOrder();"> 
+        <input class="button" type="reset" value="Clear"
+onclick="document.getElementById('my-order').style.display = 'none'"; >
+        </td>
+        </tr>
+
+        </table>
+        </form>
+    
+        <div id="my-order">
+
+        </div>
+</body>
