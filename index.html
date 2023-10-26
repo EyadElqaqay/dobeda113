@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="TTY.png">
+
+    <script>
+      window.onload=function(){
+      var element=
+      document.createElement("script");
+      element.src="animateCRUDS.js";
+      document.body.appendChild(element);
+    };
+    </script>
+    <title>ain-academy</title>
+    <link rel="stylesheet" href="styleCRUDS.css">
+    <style>
+      *{
+        box-sizing: border-box;
+        font-size: large;
+        font-family: Arial;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="crud">
+<div class="head">
+  <div class="logo">
+    <h1 style="font-size: larger;">اكاديمية العين</h1>
+  <!-- <img src="TTY.png" width="33px" height="33px"> -->
+  </div>
+<h2 style="border-top:3px solid aqua ; font-size: larger; ">مشروع ادارة النظم</h2>
+</div>
+<div class="inputs">
+<!-- this for input title -->
+<input placeholder="اسم المنتج" type="text" id="title">
+    <!-- this for input price -->
+    <div class="price">
+       <input onkeyup="getTotal()"type="number"  placeholder="السعر" id="price">
+    <!-- this for input taxes -->
+       <input onkeyup="getTotal()"type="number"  placeholder="الضرائب" id="taxes">
+    <!-- this for input ads -->
+       <input onkeyup="getTotal()"type="number"  placeholder="الاعلانات"id="ads">
+    <!-- this for input discount -->
+       <input onkeyup="getTotal()"type="number"  placeholder="الخصم" id="discount">
+    <!-- this as margin with his value -->
+       <small id="totle"></small>
+ </div>
+<!-- this for input count in class inputs -->
+<input placeholder="العدد" type="number" id="count">
+<!-- this for input category in class inputs -->
+<input placeholder="النوع" type="text" id="category">
+<!-- this button for creats -->
+<button id="submit">انشيء</button>
+</div>
+<div class="outputs">
+  <div class="searchBlock">
+    <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="ابحث">
+  </div>
+  <div class="btnSearch">
+    <button onclick="getSearchMood(this.id)" id="searchTitle">البحث بالاسم</button>
+    <button onclick="getSearchMood(this.id)" id="searchCategory">البحث عن النوع</button>
+  </div>
+  <div id="deleteAll">
+
+  </div>
+  <table>
+    <tr>
+      <th>رقم</th>
+      <th>المنتج</th>
+      <th>السعر</th>
+      <th>الضرائب</th>
+      <th>الاعلانات</th>
+      <th>الخصم</th>
+      <th>العدد</th>
+      <th>المحموع</th>
+      <th>النوع</th>
+      <th>التحديث</th>
+      <th>المسح</th>
+    </tr>
+    <tbody id="tbody">
+      <!-- <tr>
+        <td>1.</td>
+        <td>Samsung</td>
+        <td>3400</td>
+        <td>12</td>
+        <td>10</td>
+        <td>3</td>
+        <td>200</td>
+        <td>Phones</td>
+        <td><button id="update">Update</button></td>
+        <td><button id="delete">delete</button></td>
+      </tr> -->
+    </tbody>
+  </table>
+ </div>
+  </div>
+  <footer class="footer">
+  <p>كل الحقوق مكتسبة لدي إياد القعقاعي &copy; 07/8/2022</p>
+  </footer>
+  </body>
+</html>
